@@ -7,13 +7,11 @@ from openpyxl import load_workbook
 from openpyxl.styles import Border, Side, Font, PatternFill
 import sys
 from openpyxl.utils import get_column_letter
-
-file_path = r"C:\Users\TanmaySahu\OneDrive - AIR INDIA LIMITED\Desktop\COde\reports\AI_16-30JUNE_CC 1.xlsx"
 st.title("Roster Comparison Report")
 uploaded_file = st.file_uploader("Upload Excel File", type=["xlsx"])
 if uploaded_file is not None:
         
-    df = pd.read_excel(file_path, engine='openpyxl',sheet_name='Sheet1')
+    df = pd.read_excel(uploaded_file, engine='openpyxl',sheet_name='Sheet1')
     #st.title("Analysis report of AI 16-30JUNE_CC 1")
 
     #st.write("Data Preview:", df.head())
@@ -34,6 +32,7 @@ if uploaded_file is not None:
     st.write("Data Preview:", df.head())
 
     # for activity type change table
+    st.w
     start_row = 3
     start_col = 0
     activity_types = df['Activity Type Change'].unique()
