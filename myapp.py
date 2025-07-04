@@ -32,7 +32,6 @@ if uploaded_file is not None:
     st.write("Data Preview:", df.head())
 
     # for activity type change table
-    st.w
     start_row = 3
     start_col = 0
     activity_types = df['Activity Type Change'].unique()
